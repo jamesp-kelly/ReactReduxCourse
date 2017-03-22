@@ -13,7 +13,7 @@ export default function courseReducer(courseState = initialState.courses, action
       ];
     case types.UPDATE_COURSE_SUCCESS:
       return [
-        ...courseState.filter(course => course.id !== actions.course.id),
+        ...courseState.filter(course => course.id !== action.course.id),
         Object.assign({}, action.course)
       ];
     default:
